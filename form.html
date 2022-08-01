@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="name">Ім’я</label>
+        <input type="text" name="user-name" id="name" />
+
+        <label for="tel">Телефон</label>
+        <input type="tel" name="tel" id="tel">
+
+        <label for="email">Пошта</label>
+        <input type="email" name="email" id="email">
+
+        <br />
+
+        <!-- чекбокс -->
+        <div role="group">
+            <label for="one">One</label>
+            <input type="checkbox" name="topic" value="one" id="one">
+
+            <label for="two">Two</label>
+            <input type="checkbox" name="topic" value="two" id="two">
+
+            <label for="three">Three</label>
+            <input type="checkbox" name="topic" value="three" id="three">
+        </div>
+
+        <br />
+
+        <!-- радіо батони, фільтр в портфоліо -->
+        <div role="group">
+            <label for="web">Веб-сайти</label>
+            <input type="radio" name="filter" value="web" id="web" checked />
+            <!-- щоб при завантаженні сторінки була вибрана галочка (прочитав договір, н-д), то треба вказати checked -->
+
+            <label for="app">Додатки</label>
+            <input type="radio" name="filter" value="app" id="app" />
+
+            <label for="design">Дизайн</label>
+            <input type="radio" name="filter" value="design" id="design" />
+        </div>
+
+        <br />
+
+        <!-- вибрати дату -->
+        <label for="date">Час виступу</label>
+        <input type="datetime-local" name="data" id="date" min="2022-07-30T12:30" max="2022-08-03T20:30">
+        <!-- це важко стилізувати -->
+
+        <br />
+
+        <!-- завантаження якогось файлу (фото, презентація тощо) -->
+        <label for="pdf">Завантажте презентацію в pdf</label>
+        <input type="file" name="pdf" id="pdf">
+        <!-- це тільки вибирає файл, але не завантажує його, для цбого використовується  js -->
+
+        <br />
+
+        <!-- поле для коментаря -->
+        <label for="comment"> Залиште коментар</label>
+        <textarea name="comment" id="comment" rows="10"></textarea>
+        <!-- його можна зламати, тому в css треба задати параметри, які заборонять це робити
+        textarea{
+      resize: none
+     }  -->
+
+        <br />
+
+        <!-- підтвердження політики конфіденційності -->
+        <label for="policy">Погоджуюсь на все</label>
+        <input type="checkbox" name="policy" id="policy">
+
+        <br />
+
+        <button type="submit">Залишити заявку</button>
+
+
+    </form>
+</body>
+
+</html>
