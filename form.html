@@ -6,78 +6,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/form.css">
 </head>
 
 <body>
-    <form>
-        <label for="name">Ім’я</label>
-        <input type="text" name="user-name" id="name" />
+    <form class="form contacts-form">
+        <div class="form-field">
+            <label for="name" class="form-label">Ім’я</label>
+            <input type="text" class="form-input" name="user-name" id="name" placeholder="Марія Петрівна" autofocus />
+            <!-- autofocus може бути тільки в якомусь одному полі на сторінці -->
+            <!-- autocomplete="on" or "off" автопідказка полів можна поставити на якісь рядни або на всю форму -->
 
-        <label for="tel">Телефон</label>
-        <input type="tel" name="tel" id="tel">
+        </div>
 
-        <label for="email">Пошта</label>
-        <input type="email" name="email" id="email">
+        <div class="form-field">
+            <label for="tel" class="form-label">Телефон</label>
+            <input type="tel" class="form-input" name="tel" id="tel">
+        </div>
+
+        <div class="form-field">
+            <label for="email" class="form-label">Пошта</label>
+            <input type="email" class="form-input" name="email" id="email">
+        </div>
+
 
         <br />
 
         <!-- чекбокс -->
-        <div role="group">
-            <label for="one">One</label>
-            <input type="checkbox" name="topic" value="one" id="one">
+        <div role="group" class="group">
+            <h2 class="group-title">Тема доповіді</h2>
 
-            <label for="two">Two</label>
-            <input type="checkbox" name="topic" value="two" id="two">
+            <ul class="topic-options">
+                <li>
+                    <input type="checkbox" name="topic" value="one" id="one">
+                    <label for="one">One</label>
+                </li>
 
-            <label for="three">Three</label>
-            <input type="checkbox" name="topic" value="three" id="three">
+                <li>
+                    <input type="checkbox" name="topic" value="two" id="two">
+                    <label for="two">Two</label>
+                </li>
+
+                <li>
+                    <input type="checkbox" name="topic" value="three" id="three">
+                    <label for="three">Three</label>
+                </li>
+            </ul>
         </div>
 
         <br />
 
         <!-- радіо батони, фільтр в портфоліо -->
-        <div role="group">
-            <label for="web">Веб-сайти</label>
-            <input type="radio" name="filter" value="web" id="web" checked />
-            <!-- щоб при завантаженні сторінки була вибрана галочка (прочитав договір, н-д), то треба вказати checked -->
+        <div role="group" class="group">
+            <h2>Варіанти наших робіт</h2>
+            <ul class="filter-options">
+                <li>
+                    <input type="radio" name="filter" value="web" id="web" checked />
+                    <label for="web">Веб-сайти</label>
+                    <!-- щоб при завантаженні сторінки була вибрана галочка (прочитав договір, н-д), то треба вказати checked -->
+                </li>
 
-            <label for="app">Додатки</label>
-            <input type="radio" name="filter" value="app" id="app" />
+                <li></li>
+                <input type="radio" name="filter" value="app" id="app" />
+                <label for="app">Додатки</label>
 
-            <label for="design">Дизайн</label>
-            <input type="radio" name="filter" value="design" id="design" />
+                </li>
+
+                <li>
+                    <input type="radio" name="filter" value="design" id="design" />
+                    <label for="design">Дизайн</label>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- вибрати дату -->
+        <div class="form-field">
+            <label for="date">Час виступу</label>
+            <input type="datetime-local" class="date" name="data" id="date" min="2022-07-30T12:30"
+                max="2022-08-03T20:30">
+            <!-- це важко стилізувати -->
+
+        </div>
+
+
+        <!-- завантаження якогось файлу (фото, презентація тощо) -->
+        <div class="form-field">
+            <label for="pdf">Завантажте презентацію в pdf</label>
+            <input type="file" name="pdf" id="pdf">
+            <!-- це тільки вибирає файл, але не завантажує його, для цбого використовується  js -->
+
+        </div>
+
+        <!-- поле для коментаря -->
+        <div class="form-field">
+            <label for="comment"> Залиште коментар</label>
+            <textarea name="comment" class="comment" id="comment" rows="10"></textarea>
+            <!-- його можна зламати, тому в css треба задати параметри, які заборонять це робити
+                    textarea{
+                  resize: none
+                 }  -->
         </div>
 
         <br />
 
-        <!-- вибрати дату -->
-        <label for="date">Час виступу</label>
-        <input type="datetime-local" name="data" id="date" min="2022-07-30T12:30" max="2022-08-03T20:30">
-        <!-- це важко стилізувати -->
-
-        <br />
-
-        <!-- завантаження якогось файлу (фото, презентація тощо) -->
-        <label for="pdf">Завантажте презентацію в pdf</label>
-        <input type="file" name="pdf" id="pdf">
-        <!-- це тільки вибирає файл, але не завантажує його, для цбого використовується  js -->
-
-        <br />
-
-        <!-- поле для коментаря -->
-        <label for="comment"> Залиште коментар</label>
-        <textarea name="comment" id="comment" rows="10"></textarea>
-        <!-- його можна зламати, тому в css треба задати параметри, які заборонять це робити
-        textarea{
-      resize: none
-     }  -->
-
-        <br />
-
         <!-- підтвердження політики конфіденційності -->
-        <label for="policy">Погоджуюсь на все</label>
-        <input type="checkbox" name="policy" id="policy">
+        <div class="form-field">
+            <input type="checkbox" name="policy" id="policy">
+            <label for="policy">Погоджуюсь на все</label>
 
+        </div>
         <br />
 
         <button type="submit">Залишити заявку</button>

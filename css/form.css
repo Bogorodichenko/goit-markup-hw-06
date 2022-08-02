@@ -1,0 +1,88 @@
+body {
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    font-family: Roboto, sans-serif;
+    margin: 0;
+
+}
+
+.form {
+    width: 600px;
+    outline: 1px solid tomato;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    /* outline: 1px solid blue; */
+    margin-bottom: 20px;
+}
+
+.form-field label {
+    margin-bottom: 5px;
+}
+
+.form-field input {
+    margin: 0;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #2a2a2a;
+}
+
+.form-field input::placeholder {
+    color: #2a2a2a;
+}
+
+
+/* чекбокс */
+.group {
+    margin-bottom: 20px;
+}
+
+.group-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.topic-options,
+.filter-options {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.topic-options li {
+    display: flex;
+    align-items: center;
+}
+
+/* селектор атрибуту */
+.topic-options input[type="checkbox"] {}
+
+.topic-options label {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+/* радіобатон */
+
+.filter-options {}
+
+/* оформлення часу */
+
+.form-field .date {
+    border-color: red;
+    /* border-width: 5px;  vj;yf*/
+    border-radius: 4px;
+    padding: 20px 40px;
+    font-size: 20px;
+    color: blue;
+    /* background-color: #2a2a2a; можна*/
+}
+
+.form-field .comment {
+    padding: 20px;
+}
