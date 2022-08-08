@@ -65,18 +65,7 @@
                 <h1 class="title">Эффективные решения<br> для вашего бизнеса</h1>
                 <button class="button" type="button" data-modal-open>Заказать услугу</button>
             </div>
-            <!-- МОДАЛЬНЕ ВІКНО -->
-            <div class="backdrop is-hidden" data-modal>
-                <div class="modal">
-                    <button class="modal-btn" data-modal-close>
-                        <svg class="modal-btn-icon" width="18" height="18">
-                            <use href="./images/symbol-defs-all.svg#icon-close"></use>
-                        </svg>
-                    </button>
 
-                </div>
-
-            </div>
         </section>
         <!-- Наші переваги -->
         <section class="benefits">
@@ -380,7 +369,7 @@
                 <div class="footer-addres">
                     <a class="footer-logo" href="/"><span class="logo-web">Web</span>Studio</a>
                     <address class="address">
-                        <p class="post-address"> г. Киев, пр-т Леси Украинки, 26</p>
+                        <p class="post-address"> м. Київ, пр-т Лесі Українки, 26</p>
                         <ul class="footer-contact-links">
                             <li class="item"><a class="footer-contact-link"
                                     href="mailto:info@example.com">info@example.com</a>
@@ -392,7 +381,7 @@
                     </address>
                 </div>
                 <div class="footer-socialmedia">
-                    <h3 class="footer-socialmedia-title">Писоединяйтесь</h3>
+                    <h3 class="footer-socialmedia-title">Приєднуйтесь</h3>
                     <ul class="socialmedia-list">
                         <li class="footer-social-item">
                             <a class="footer-social-link" href="" target="_blank" aria-label="Instagram">
@@ -425,9 +414,76 @@
                         </li>
                     </ul>
                 </div>
+
+                <div>
+                    <h2>Підпишіться на розсилку</h2>
+                    <form action="">
+                        <label for="">
+                            <input type="email" placeholder="E-mail">
+                        </label>
+                        <button type="submit">Підписатися</button>
+
+                    </form>
+
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- МОДАЛЬНЕ ВІКНО -->
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="modal-btn" data-modal-close>
+                <svg class="modal-btn-icon" width="18" height="18">
+                    <use href="./images/symbol-defs-all.svg#icon-close"></use>
+                </svg>
+            </button>
+
+            <!-- ФОРМА -->
+            <form>
+                <strong class="form-title">Залиште свої дані, ми вам передзвонимо</strong>
+
+                <label class="form-group">
+                    <span class="form-label">Ім’я</span>
+                    <input class="form-input" type="text" name="" id="user-name">
+                    <!-- <svg class="form-icon">
+                        <use href=""></use>
+                    </svg> -->
+                </label>
+
+                <label class="form-group">
+                    <span class="form-label">Телефон</span>
+                    <input class="form-input" type="tel" name="" id="user-phone">
+                    <!-- <svg class="form-icon">
+                        <use href=""></use>
+                    </svg> -->
+                </label>
+
+                <label class="form-group">
+                    <span class="form-label">Пошта</span>
+                    <input class="form-input" type="email" name="" id="user-email">
+                    <!-- <svg class="form-icon">
+                        <use href=""></use>
+                    </svg> -->
+                </label>
+
+                <label class="form-group">
+                    <span class="form-label">Коментар</span>
+                    <textarea class="form-input" type="text" name="comment" placeholder="Введіть текст"></textarea>
+                </label>
+
+                <label>
+                    <input type="checkbox" name="">
+                    <span>Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></span>
+                </label>
+
+                <button type="submit">Відправити</button>
+            </form>
+
+        </div>
+
+    </div>
+
     <script src="./js/model.js"></script>
 </body>
 
