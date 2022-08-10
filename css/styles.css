@@ -492,10 +492,10 @@ body {
     fill: var(--text-title-color);
 }
 
-.agreement-icon-check {
+/* .agreement-icon-check {
     width: 16px;
     height: 15px;
-}
+} */
 
 .register-checkbox:checked+.agreement-icon .agreement-icon-uncheck {
     opacity: 0;
